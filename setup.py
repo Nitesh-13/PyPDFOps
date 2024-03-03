@@ -5,7 +5,7 @@ DESCRIPTION = 'utility library for pdf manupulation'
 LONG_DESCRIPTION = 'A package that aprovides various functionalities for pdfs such as compressing, splittin, merging and converting to various formats.'
 
 setup(
-    name="pdfutil",
+    name="pypdfops",
     version=VERSION,
     author="Nitesh (limelight)",
     author_email="<ritu10mali@gmail.com>",
