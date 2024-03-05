@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 VERSION = '0.0.1'
 DESCRIPTION = 'utility library for pdf manupulation'
-LONG_DESCRIPTION = 'A package that aprovides various functionalities for pdfs such as compressing, splittin, merging and converting to various formats.'
+LONG_DESCRIPTION = 'A package that provides various functionalities for pdfs such as compressing, splittin, merging and converting to various formats.'
 
 setup(
     name="pypdfops",
