@@ -3,6 +3,9 @@ PyPdfOps: Python PDF Operations Library
 
 PyPdfOps is a Python library that simplifies the manipulation of PDF files. It provides a set of methods for common PDF operations, including compression, conversion to different formats (pptx, images, doc), splitting, and merging. With PyPdfOps, you can streamline your PDF-related tasks in your Python projects.
 
+### Check out the library on PYPI
+[PyPDFOps PYPI Repository](https://pypi.org/project/pypdfops/)
+
 Installation
 ------------
 
