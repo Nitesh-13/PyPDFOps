@@ -4,7 +4,7 @@ import pathlib
 here = pathlib.Path(__file__).parent.resolve()
 
 
-VERSION = '0.0.1'
+VERSION = '0.0.2'
 DESCRIPTION = 'A utility library for pdf manupulation'
 LONG_DESCRIPTION = long_description = (here / 'README.md').read_text(encoding='utf-8')
 
