@@ -90,7 +90,31 @@ output_pdf = "Merged.pdf"
 pdf = PDFOps()
 pdf.merge_pdfs(input_pdfs, output_pdf)
 ```
-        
+
+
+
+### 7\. PDF Encryption
+
+```python
+from pypdfops import PDFOps 
+input_pdf = "input.pdf
+output_pdf = "encrypted.pdf"
+password = "12345678"
+pdf = PDFOps()
+pdf.encrypt_pdf(input_pdf, output_pdf, password)
+```
+
+
+### 8\. PDF Decryption
+
+```python
+from pypdfops import PDFOps 
+input_pdf = "input.pdf
+output_pdf = "decrypted.pdf"
+password = "12345678"
+pdf = PDFOps()
+pdf.decrypt_pdf(input_pdf, output_pdf, password)
+```
     
 
 Feel free to customize the examples and add more details to suit your specific use cases.
