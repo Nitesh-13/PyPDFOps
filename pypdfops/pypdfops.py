@@ -154,3 +154,49 @@ class PDFOps:
             return False
         
         return True
+    
+
+    def encrypt_pdf(self, input_pdf: str, output_pdf: str, password: str) -> bool:
+        
+        try:
+            inp_pdf = PyPDF2.PdfReader(input_pdf)
+            outp_pdf = PyPDF2.PdfWriter()
+            if inp_pdf.is_encrypted:
+                print("[!] PDF is already encrypted!")
+                return False
+            for pageNum in range(len(inp_pdf.pages)):
+                outp_pdf.add_page(inp_pdf.pages[pageNum])
+            
+            outp_pdf.encrypt(password)
+            
+            result_pdf = open(output_pdf, "wb")
+            outp_pdf.write(result_pdf)
+            result_pdf.close()
+        except Exception as err:
+            print(f"An error has occured while encrypted pdf. Hint: {err}")
+            return False
+        
+        return True
+    
+
+    def decrypt_pdf(self, input_pdf: str, output_pdf: str, password: str) -> bool:
+        
+        try:
+            inp_pdf = PyPDF2.PdfReader(input_pdf)
+            outp_pdf = PyPDF2.PdfWriter()
+            if not inp_pdf.is_encrypted:
+                print("[!] PDF does not have any encryption!")
+                return False
+
+            inp_pdf.decrypt(password)
+
+            for pageNum in range(len(inp_pdf.pages)):
+                outp_pdf.add_page(inp_pdf.pages[pageNum])
+            result_pdf = open(output_pdf, "wb")
+            outp_pdf.write(result_pdf)
+            result_pdf.close()
+        except Exception as err:
+            print(f"An error has occured while decrypted pdf. Hint: {err}")
+            return False
+        
+        return True
